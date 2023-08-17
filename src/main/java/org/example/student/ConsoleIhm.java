@@ -40,6 +40,9 @@ public class ConsoleIhm {
                         System.out.println("Quel est la date du diplôme?");
                         String date = sc.nextLine();
                         request.AddStudent(firstname, lastname, numClass, Date.valueOf(date));
+                        System.out.println("Création de l'étudiant : ");
+                        System.out.println(new Student(firstname, lastname, numClass, Date.valueOf(date)).toString());
+
                         break;
                     case 2:
                         System.out.println("=== Afficher la totalité des étudiants ===");
@@ -74,7 +77,6 @@ public class ConsoleIhm {
             } while (num != 0);
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-
 
         }
 
